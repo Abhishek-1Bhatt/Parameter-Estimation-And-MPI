@@ -20,7 +20,7 @@ As we can see the DP5 implementation here is able to approximate the solution to
 ### Distributed Computing with MPI.jl
 
 MPI.jl is the julia interface for utilising the Message Passing Interface standard in a High Performance Cluster. It allows the same program to be run on different nodes of a High Performance Cluster(Distributed SPMD). But it can also be used in a single node(like a pc) to communicate between multiple processes. This is what has been shown in this [script](https://github.com/Abhishek-1Bhatt/Parameter-Estimation-And-MPI/blob/main/mpass.jl) 
-where I have used two processes to generate the Bandwidth vs Message Size Plot by having two processes send each other 2^n length arrays of Int8(1 byte) values. Send-Receive is one of the many types of communications which can be done through MPI called Point-to-Point communication. Other methods of communication are Gather, Scatter, Reduce and Broadcast.
+where I have used two processes to generate the Bandwidth vs Message Size Plot by having two processes send each other 2^n length arrays(n=1:25) of Int8(1 byte) values. Send-Receive is one of the many types of communications which can be done through MPI called Point-to-Point communication. Other methods of communication are Gather, Scatter, Reduce and Broadcast.
 
 The two processes give two plots as output, as shown,
 
